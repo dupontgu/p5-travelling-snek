@@ -1,6 +1,6 @@
 
 let ballSize = 0
-let numBalls = 20
+let numBalls = 30
 let colorScale = 0xff / numBalls
 
 // holds positions of all balls
@@ -20,7 +20,6 @@ function setup() {
   }
 }
 
-let read = 0
 function draw() {
   background(255)
   noStroke()
@@ -29,8 +28,9 @@ function draw() {
     fill(color);
     let mx = mouseX / width * i
     let my = mouseY / height * i
-    let calcX = (sin(sin(mx)) + 1) * (width / 2) + mx
-    let calcY = (sin(my) + 1) * (height / 2) + my
+    console.log(mx);
+    let calcX = (Math.sin(Math.sin(mx)) + 1) * (width / 2) + mx
+    let calcY = (Math.sin(my) + 1) * (height / 2) + my
 
     // weighted average for smooth motion
     xs[i] = (xs[i] * calcWeight) + (calcX * motionWeight)
