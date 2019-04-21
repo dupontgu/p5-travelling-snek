@@ -1,6 +1,6 @@
 
 let ballSize = 0
-let numBalls = 50
+let numBalls = 20
 let colorScale = 0xff / numBalls
 
 // holds positions of all balls
